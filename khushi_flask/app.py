@@ -1,6 +1,6 @@
 from flask import Flask,request,render_template,redirect
 
-app=Flask(__name__,template_folder='template')
+app=Flask(__name__)
 
 #routes
 @app.route("/")
@@ -20,6 +20,8 @@ def login():
         print(phone)
         return redirect('/')
     return render_template('login.html')
-    
+
+# this is sid's comment  
+
 if __name__=="__main__":
     app.run(debug=True)
