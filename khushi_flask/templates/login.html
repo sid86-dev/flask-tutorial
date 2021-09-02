@@ -2,13 +2,20 @@
 <html>
 <head>
     <title> Login Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+      body{
+        background-image: url({{url_for('static',filename='images/img3.jpg')}});
+        background-size: cover;
+      }
+    </style>
 
 </head>
    <body bgcolor="orange">
    
       <form action='/login' method='POST'>
           <input type="text" placeholder="enter username", name="username">
-          <input type="text" placeholder="enter phone", name="phone">
+          <input type="text" placeholder="enter password", name="password">
           <input type="submit" value="Login">
       </form>
       <h1>{{info}}</h1>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 1200px;
+    height:75px;
+    margin: auto;
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color:red;
+    font-size: 40px;
+    font-family: Helvetica;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Helvetica;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: red;
+}
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border:1px solid red;
+    margin-top: 13px;
+    color: white;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: red;
+    border:2px solid red;
+    margin-top: 13px;
+    color: white;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn:focus{
+    outline:none;
+}
+
+.srch:focus{
+    outline:none;
+}
+.cn{
+    width: 100px;
+    height: 40px;
+    background: red;
+    border:2px solid red;
+    margin-top: 13px;
+    color: white;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.cn:focus{
+    outline:none;
+}
+
+.cn:focus{
+    outline:none;
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin-top: auto;
+    color:black;
+    position: relative;
+}
