@@ -4,9 +4,6 @@ app.secret_key="Khushisecretkey"
 
 #routes
 
-@app.route("/")
-def index():
-    return render_template('index.html')
 
 @app.route("/register",methods=['GET','POST'])
 def form():
@@ -58,6 +55,11 @@ def about():
 def logout():
     session.pop("user")
     return redirect("/")
+
+@app.route("/test/<int:value>")
+def test(value):
+    print(type(value))
+    return f"this is:{value}"
 
 # this is sid's comment  
 
