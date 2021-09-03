@@ -1,6 +1,5 @@
-
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=sid86-dev.flask-tutorial)
-
+![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 # A complete Flask tutorial for beginners
 
 > #### I made this tutorial to help and teach my students make awesome dynamic websites using Flask. Flask is an API of Python that allows us to build up web-applications. It was developed by Armin Ronacher. It's Modern and very expressive, I learned it because it's just super useful and also allows me to write less code.
