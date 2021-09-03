@@ -1,6 +1,6 @@
-from flask import Flask,request,render_template,redirect
-
+from flask import Flask,request,render_template,redirect,session
 app=Flask(__name__)
+app.secret_key="Khushisecretkey"
 
 #routes
 
@@ -10,6 +10,29 @@ def index():
 
 @app.route("/register",methods=['GET','POST'])
 def form():
+@app.route("/login",methods=['GET','POST'])
+def login():
+    if request.method=='POST':
+        username=request.form.get('username')
+        password=request.form.get('password')
+        print(username)
+        print(password)
+        # this is a session variable
+        session["user"]=username
+        return render_template('result.html',username=username,password=password)
+    return render_template('login.html')
+
+@app.route("/")
+def index():
+    try:
+        username=session["user"]
+        if("user" in session and session["user"]==username):
+            return render_template('result.html',username=username)
+    except:
+        return render_template('index.html')
+
+@app.route("/forms",methods=['GET','POST'])
+def forms():
     if request.method=='POST':
         name=request.form.get('name')
         phone=request.form.get('phone')
@@ -23,10 +46,17 @@ def form():
         print(age)
         print(stream)
         print(address)
-        return render_template('result.html',username=name,phone=phone,email=email,age=age,stream=stream,address=address)
-    return render_template('forms.html')
+        return render_template('result.html',name=name, phone=phone,email=email,age=age,stream=stream,address=address)
+    return render_template('login.html')
 
+@app.route("/about")
+def about():
+        return render_template('about.html')
 
+@app.route("/logout")
+def logout():
+    session.pop("user")
+    return redirect("/")
 
 # this is sid's comment  
 
