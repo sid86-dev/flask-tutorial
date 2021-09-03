@@ -3,7 +3,7 @@
 ## Table of Content
 <hr>
 
-* ## [Minimal app](/minimal_app)
+* ### [Minimal app](/minimal_app)
 
 
 
