@@ -6,7 +6,7 @@
 ## Table of Content
 <hr>
 
-* #### [Minimal app](#minimal-app)
+- [Minimal app](#minimal-app)
 * #### [Routing](/routing)
 * #### [Url Variables](/url_variable)
 * #### [Rendering Templates](/render_template)
