@@ -9,7 +9,7 @@
 
 - [Minimal app](#minimal-app)
 - [Routing](#routing)
-* #### [Url Variables](/url_variable)
+- [Url Variables](#url-variables)
 * #### [Rendering Templates](/render_template)
 * #### [Debug Mode](/debug_mode)
 <hr>
@@ -42,7 +42,7 @@ List of companies using Flask framework - who is using Flask?
 
 ## Minimal app
 
-[Code Here](/minimal_app)
+[Code Here ⚙️](/minimal_app)
 
 ```python
 from flask import Flask
@@ -71,7 +71,7 @@ if __name__=="__main__":
 
 ## Routing
 
-[Code Here](/routing)
+[Code Here ⚙️](/routing)
 
 ```python
 from flask import Flask
@@ -98,3 +98,55 @@ if __name__=="__main__":
 > Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to   directly visit a page.
 
 > Use the route() decorator to bind a function to a URL.
+
+<hr>
+
+## Url Variables
+
+[Code Here ⚙️](/url_variables)
+
+
+```python
+  
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+# string
+@app.route('/string/<string:value>')
+def string(value):
+    return f"<p>Hi this is a string value {value}</p>"
+
+# int
+@app.route('/int/<int:value>')
+def int(value):
+    return f"<p>Hi this is a int value {value}</p>"
+
+# float
+@app.route('/float/<float:value>')
+def float(value):
+    return f"<p>Hi this is a float value {value}</p>"
+
+# path
+@app.route('/path/<path:value>')
+def path(value):
+    return f"<p>Hi this is a path value {value}</p>"
+
+# uuid
+@app.route('/uuid/<uuid:value>')
+def uuid(value):
+    return f"<p>Hi this is a uuid value {value}</p>"
+
+
+
+if __name__=="__main__":
+    app.run(debug=True)
+    
+```
+
+> You can add variable sections to a URL by marking sections with `<variable_name>`. Your function then receives the `<variable_name>` as a keyword argument. Optionally, you can use a  converter to specify the type of the argument like <converter:variable_name>.
+
