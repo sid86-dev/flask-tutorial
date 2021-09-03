@@ -7,7 +7,7 @@
 <hr>
 
 - [Minimal app](#minimal-app)
-* #### [Routing](/routing)
+- [Routing](#routing)
 * #### [Url Variables](/url_variable)
 * #### [Rendering Templates](/render_template)
 * #### [Debug Mode](/debug_mode)
@@ -65,3 +65,33 @@ if __name__=="__main__":
 3. We then use the route() decorator to tell Flask what URL should trigger our function.
 
 4. The function returns the message we want to display in the user’s browser. The default content type is HTML, so HTML in the string will be rendered by the browser.
+
+## Routing
+
+[Code Here](/routing)
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'This is Index Page'
+
+@app.route('/login')
+def login():
+    return 'This is Login Page'
+
+@app.route('/hello')
+def hello():
+    return 'Hello, World'
+
+if __name__=="__main__":
+    app.run(debug=True)
+
+```
+
+> Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to   directly visit a page.
+
+> Use the route() decorator to bind a function to a URL.
