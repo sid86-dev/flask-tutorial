@@ -1,6 +1,6 @@
 # A complete Flask tutorial for beginners
 
-
+> ### Flask is an API of Python that allows us to build up web-applications. It was developed by Armin Ronacher. Flask's framework is more explicit than Django's framework and is also easier to learn because it has less base code to implement a simple web-Application.
 > ### Get started with Installation and then get an overview with the Quickstart. This Tutorial will shows how to create a small but complete application with Flask.
 
 ## Table of Content
