@@ -4,7 +4,11 @@ app=Flask(__name__)
 
 #routes
 
-@app.route("/",methods=['GET','POST'])
+@app.route("/")
+def index():
+    return render_template('index.html')
+
+@app.route("/register",methods=['GET','POST'])
 def form():
     if request.method=='POST':
         name=request.form.get('name')
@@ -22,9 +26,6 @@ def form():
         return render_template('result.html',username=name,phone=phone,email=email,age=age,stream=stream,address=address)
     return render_template('forms.html')
 
-@app.route("/index")
-def index():
-    return render_template('index.html')
 
 
 # this is sid's comment  
