@@ -9,8 +9,10 @@
 <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" alt="logo" style="width:400px;"> 
 </p>
 
-## Table of Content
 <hr>
+
+## Table of Content
+
 
 - [Installation](#installation)
 - [Minimal app](#minimal-app)
