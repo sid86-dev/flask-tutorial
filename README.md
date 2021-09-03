@@ -8,9 +8,10 @@
 <hr>
 
 - [Minimal app](#minimal-app)
+- [Debug Mode](#debug-mode)
 - [Routing](#routing)
 - [Url Variables](#url-variables)
-- [Debug Mode](#debug-mode)
+
 
 <hr>
 
