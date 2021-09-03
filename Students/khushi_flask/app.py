@@ -10,6 +10,7 @@ def index():
 
 @app.route("/register",methods=['GET','POST'])
 def form():
+    pass
 @app.route("/login",methods=['GET','POST'])
 def login():
     if request.method=='POST':
