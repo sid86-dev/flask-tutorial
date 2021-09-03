@@ -1,7 +1,7 @@
 # A complete Flask tutorial for beginners
 
 
-> ### Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask.
+> ### Get started with Installation and then get an overview with the Quickstart. This Tutorial will shows how to create a small but complete application with Flask.
 
 ## Table of Content
 <hr>
