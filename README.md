@@ -10,8 +10,8 @@
 - [Minimal app](#minimal-app)
 - [Routing](#routing)
 - [Url Variables](#url-variables)
-* #### [Rendering Templates](/render_template)
-* #### [Debug Mode](/debug_mode)
+- [Debug Mode](#debug-mode)
+
 <hr>
 
 ## Installation
@@ -19,11 +19,6 @@
 ## `pip install flask`
 
 <hr>
-<!-- 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column -->
 
 ## Docs
 
@@ -39,6 +34,10 @@ List of companies using Flask framework - who is using Flask?
 ### Companies using Flask
 
 - [Red Hat](http://redhat.com) , [Rackspace](http://rackspace.com), [Airbnb](http://airbnb.com), [Netflix](https://medium.com/netflix-techblog/automation-as-a-service-introducing-scriptflask-17a8e4ad954b), [PythonAnywhere](https://www.pythonanywhere.com/), [Lyft](https://stackshare.io/lyft/lyft), [Reddit](https://stackshare.io/reddit/reddit), [Mailgun](https://stackshare.io/mailgun/mailgun), [MIT](https://stackshare.io/mit/mit), [Mozilla](https://www.mozilla.org), [Balrog (Application Update Service)](https://github.com/mozilla/balrog), [Release Engineering Services](https://github.com/mozilla-releng/services), [Hotjar](https://stackshare.io/hotjar/hotjar), [Patreon](https://stackshare.io/patreon/patreon), [Teradata](https://stackshare.io/teradata/teradata), [Uber](https://stackshare.io/uber/partners-uber-com), [Samsung](https://stackshare.io/engel80/apkg), [Nginx](https://stackshare.io/nginx-inc/nginx-amplify), +1.5k more companies in [https://stackshare.io/flask/](https://stackshare.io/flask/)
+
+<hr>
+
+# Quickstart
 
 ## Minimal app
 
@@ -57,7 +56,7 @@ if __name__=="__main__":
     app.run()
 
 ```
-### So what did that code do?
+#### So what did that code do?
 
 1. First we imported the Flask class. An instance of this class will be our WSGI application.
 
@@ -66,6 +65,30 @@ if __name__=="__main__":
 3. We then use the route() decorator to tell Flask what URL should trigger our function.
 
 4. The function returns the message we want to display in the user’s browser. The default content type is HTML, so HTML in the string will be rendered by the browser.
+
+<hr>
+
+## Debug Mode
+
+[Code Here ⚙️](/debug_mode)
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+# debud mode running on 8000 port
+if __name__=="__main__":
+    app.run(debug=True, port=8000)
+ ```
+> The flask run command can do more than just start the development server. By enabling debug mode, the server will automatically reload if code changes, and will show an          interactive debugger in the browser if an error occurs during a request.
+
+> Warning ⚠️ 
+> The debugger allows executing arbitrary Python code from the browser. It is protected by a pin, but still represents a major security risk. Do not run the development server or   debugger in a production environment.
 
 <hr>
 
@@ -97,7 +120,7 @@ if __name__=="__main__":
 
 > Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to   directly visit a page.
 
-> Use the route() decorator to bind a function to a URL.
+> Use the `route()` decorator to bind a function to a URL.
 
 <hr>
 
@@ -150,3 +173,43 @@ if __name__=="__main__":
 
 > You can add variable sections to a URL by marking sections with `<variable_name>`. Your function then receives the `<variable_name>` as a keyword argument. Optionally, you can use a  converter to specify the type of the argument like <converter:variable_name>.
 
+<table>
+        <tr>
+            <th>Type</th>
+            <th>Value</th>
+            <th>Use</th>
+        </tr>
+        <tr>
+            <td>string</td>
+            <td>(default) accepts any text without a slash</td>
+            <td>
+                string:value
+            </td>
+        </tr>
+        <tr>
+            <td>int</td>
+            <td>accepts positive integers</td>
+            <td>int:value</td>
+        </tr>
+        <tr>
+            <td>float</td>
+            <td>accepts positive floating point values</td>
+            <td>float:value</td>
+        </tr>
+        <tr>
+            <td>path</td>
+            <td>like string but also accepts slashes</td>
+            <td>path:value</td>
+        </tr>
+        <tr>
+            <td>uuid</td>
+            <td>accepts UUID strings</td>
+            <td>uuid:value</td>
+        </tr>
+</table>
+
+<!-- 
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column -->
