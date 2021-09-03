@@ -1,12 +1,18 @@
 # A complete Flask tutorial for beginners
 
-> ### Flask is an API of Python that allows us to build up web-applications. It was developed by Armin Ronacher. 
-> 
-> ### Get started with Installation and then get an overview with the Quickstart. This Tutorial will shows how to create a small but complete application with Flask.
+> #### I made this tutorial to help and teach my students make awesome dynamic websites using Flask. Flask is an API of Python that allows us to build up web-applications. It was developed by Armin Ronacher. 
+> #### I tried to remove the extra topics of flask and made this as beginner friendly as possible. So let's get started with Installation and then get an overview with the Quickstart. This Tutorial will shows how to create a small but complete application with Flask.
+
+*Best of luck to you!*
+
+<p align="center" >
+<img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" alt="logo" style="width:400px;"> 
+</p>
 
 ## Table of Content
 <hr>
 
+- [Installation](#installation)
 - [Minimal app](#minimal-app)
 - [Debug Mode](#debug-mode)
 - [Routing](#routing)
@@ -15,9 +21,13 @@
 
 <hr>
 
-## Installation
+**Required:** 
+* A little experience with coding in python (variables, loops, methods/functions, etc)
+* Patience
+* Time
 
-## `pip install flask`
+Note this is a tutorial for **Backend Development**, not Frontend Development. Large software companies like Google, Amazon, 
+Facebook and Microsoft view Backend Developers as different from  Frontend Developers. Yet, in order to become a good programmer one need to understand the concepts of both. 
 
 <hr>
 
@@ -39,6 +49,12 @@ List of companies using Flask framework - who is using Flask?
 <hr>
 
 # Quickstart
+
+## Installation
+
+### `pip install flask`
+
+<hr>
 
 ## Minimal app
 
