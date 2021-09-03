@@ -66,6 +66,8 @@ if __name__=="__main__":
 
 4. The function returns the message we want to display in the user’s browser. The default content type is HTML, so HTML in the string will be rendered by the browser.
 
+<hr>
+
 ## Routing
 
 [Code Here](/routing)
