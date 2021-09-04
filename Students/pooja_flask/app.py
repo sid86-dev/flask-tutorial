@@ -41,7 +41,29 @@ def home():
 def logout():
     session["user"] = None
     session.pop('user', None)
-    return redirect("/")    
+    return redirect("/")   
+
+#day 1
+@app.route('/test/<string:value>')
+def test (value):
+    print(type(value))
+    return f"hi this is my string {value}"
+    #print (type(value))
+
+@app.route('/path/<path:value>')
+def path (value):
+    print(type(value))
+    return f"hi this is my path {value}"    
+
+@app.route('/int/<int:value>')
+def int (value):
+    print(type(value))
+    return f"hi this is my int {value}"       
+
+
+app.route("/test/<string:value>")
+def test(value) :
+    return f"this is string "    
     
 if __name__=="__main__":
     app.run(debug=True,port=8080)
