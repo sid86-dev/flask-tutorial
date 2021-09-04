@@ -22,6 +22,7 @@
 - [Debug Mode](#debug-mode)
 - [Routing](#routing)
 - [Url Variables](#url-variables)
+- [Message Flashing](#message-flashing)
 
 
 <hr>
@@ -235,3 +236,41 @@ First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column -->
+
+<hr>
+
+## Message Flashing
+
+[Code Here ⚙️](/message_flashing)
+
+
+```python
+from flask import Flask, flash, redirect, render_template, request, url_for
+
+app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'secret':
+            error = 'Invalid credentials'
+        else:
+            flash('You were successfully logged in')
+            return redirect('/')
+    return render_template('login.html', error=error)
+
+
+
+if __name__=="__main__":
+    app.run(debug=True)
+    
+```
+
+
+> Good applications and user interfaces are all about feedback. If the user does not get enough feedback they will probably end up hating the application. Flask provides a really simple way to give feedback to a user with the flashing system. The flashing system basically makes it possible to record a message at the end of a request and access it next request and only next request. This is usually combined with a layout template that does this. Note that browsers and sometimes web servers enforce a limit on cookie sizes. This means that flashing messages that are too large for session cookies causes message flashing to fail silently.
