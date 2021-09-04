@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask,render_template
 
 app = Flask(__name__)
@@ -24,16 +23,3 @@ def new(value):
 
 if __name__ == "__main__":
     app.run(debug=True,port=8000)
-=======
-from flask import Flask
-
-app = Flask(__name__)
-@app.route("/<string:username>")
-def index(username):
-    name = f"Hello my name is {username}"
-    return f"The output is = {name}"
-
-if __name__ == "__main__":
-    app.run(debug=True,port=8000)
-
->>>>>>> 5d0349c361597ef50998363f68239057a11753f9
