@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home():
     if request.method == "POST":
         name = request.form.get('name','error')
-        email = request.form.get('emial')
+        email = request.form.get('email')
         password = request.form.get('password')
         number = request.form.get('number')
         return render_template('day3result2.html',name=name,email=email,password=password,number=number)
