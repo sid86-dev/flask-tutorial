@@ -56,12 +56,8 @@ def logout():
     session.pop("user")
     return redirect("/")
 
-@app.route("/test/<int:value>")
-def test(value):
-    print(type(value))
-    return f"this is:{value}"
 
-# this is sid's comment  
+
 
 if __name__=="__main__":
     app.run(debug=True)
