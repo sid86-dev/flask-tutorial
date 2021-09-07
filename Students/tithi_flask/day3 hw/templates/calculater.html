@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    
+    <h2> Calculater </h2>
+    <label>Enter First Number </label><br>
+    <input type="text" id="text1" placeholder="Enter number"><br><br>
+    <label> Enter Second Numbe</label><br>
+    <input type="text" id="text2" placeholder="Enter Number"><br><br>
+    <label for="calculater"> choice </label><br>
+    <select id="calc" name="calculator" >
+        <option> Addition</option>
+        <option>Subtraction</option>
+        <option>Multiplication</option>
+        <option> Division</option>
+    </select><br><br>
+    <input type="text" id="result">
+    <input type="button" name="tbtn" value="submit" onclick="myfunc()"> <br>
+    </form>
+
+    <script type="text/javascript">
+        function myfunc()
+        {
+        var fnum = parseInt(document.getElementById("text1").value);
+        var snum = parseInt(document.getElementById("text2").value);
+        var op=document.getElementById("calc").value;
+        if(op=='Addition')
+        {
+        var r = fnum + snum;
+        document.getElementById("result").value = r;
+        }
+        else if(op=='Subtraction')
+        {
+        var r = fnum - snum;
+        document.getElementById("result").value = r;
+        }
+        else if(op=='Multiplication')
+        {
+        var r = fnum * snum;
+        document.getElementById("result").value = r;
+        }
+        else if(op=='Division')
+        {
+        var r = fnum / snum;
+        document.getElementById("result").value = r;
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body style="margin-left: 500px; margin-top: 200px">
+    <h1 style="margin-bottom: 100px;">This is my todo list</h1>
+    <br>{%for i in range(length1-1) %}
+    <h4>{{i+1}}</h4>
+    <h3>Heading: {{process_data[i]}}</h3>
+    <br>
+    <h3>Task: {{process_data[i+1]}}</h3>
+    {% endfor %}
+    
+</body>
+</html>
