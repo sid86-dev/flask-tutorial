@@ -21,7 +21,7 @@
 - [Minimal app](#minimal-app)
 - [Debug Mode](#debug-mode)
 - [Routing](#routing)
-- [Url Variables](#url-variables)
+- [URL Variables](#url-variables)
 - [Redirection](#redirection)
 - [Message Flashing](#message-flashing)
 
@@ -148,7 +148,7 @@ if __name__=="__main__":
 
 <hr>
 
-## Url Variables
+## URL Variables
 
 [Code Here ⚙️](/url_variables)
 
