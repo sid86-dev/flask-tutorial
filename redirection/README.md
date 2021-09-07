@@ -1,3 +1,4 @@
+```python
 from flask import Flask, render_template, request
 from werkzeug.utils import redirect
 
@@ -16,3 +17,5 @@ def result(name, age):
     return render_template('result.html', name=name, age=age)
 
 app.run()
+
+```
