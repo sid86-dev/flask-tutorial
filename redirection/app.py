@@ -1,18 +1,18 @@
-from flask import Flask, render_template
-from file_read import read_data
+from flask import Flask, render_template, request
+from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():   
-    # get data as a string
-    data = read_data()
-    # getting a list by processing the data
-    process_data = data.split("$")
-    # passing the list to the index file
-    length  = len(process_data)
-  
-    return render_template('index.html', process_data=process_data, length=length)
+@app.route('/', methods = ['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        age = request.form.get('age')
+        return redirect(f'/result/{name}/{age}')
+    return render_template('home.html')
 
-if __name__=="__main__":
-    app.run(debug=True)
+@app.route('/result/<name>/<age>')
+def result(name, age):
+    return render_template('result.html', name=name, age=age)
+
+app.run()
