@@ -9,48 +9,19 @@
 <body>
     
     <h2> Calculater </h2>
+    <form action="/" method="POST">
     <label>Enter First Number </label><br>
-    <input type="text" id="text1" placeholder="Enter number"><br><br>
+    <input type="text" name="fnum" ><br><br>
     <label> Enter Second Numbe</label><br>
-    <input type="text" id="text2" placeholder="Enter Number"><br><br>
-    <label for="calculater"> choice </label><br>
-    <select id="calc" name="calculator" >
+    <input type="text" name="snum"><br><br>
+    <label> choice </label><br>
+    <select name="calculator" >
         <option> Addition</option>
         <option>Subtraction</option>
         <option>Multiplication</option>
         <option> Division</option>
     </select><br><br>
-    <input type="text" id="result">
-    <input type="button" name="tbtn" value="submit" onclick="myfunc()"> <br>
+    <button class="result"> Result </button>
     </form>
-
-    <script type="text/javascript">
-        function myfunc()
-        {
-        var fnum = parseInt(document.getElementById("text1").value);
-        var snum = parseInt(document.getElementById("text2").value);
-        var op=document.getElementById("calc").value;
-        if(op=='Addition')
-        {
-        var r = fnum + snum;
-        document.getElementById("result").value = r;
-        }
-        else if(op=='Subtraction')
-        {
-        var r = fnum - snum;
-        document.getElementById("result").value = r;
-        }
-        else if(op=='Multiplication')
-        {
-        var r = fnum * snum;
-        document.getElementById("result").value = r;
-        }
-        else if(op=='Division')
-        {
-        var r = fnum / snum;
-        document.getElementById("result").value = r;
-        }
-    }
-    </script>
 </body>
 </html>
