@@ -22,6 +22,7 @@
 - [Debug Mode](#debug-mode)
 - [Routing](#routing)
 - [Url Variables](#url-variables)
+- [Redirection](#redirection)
 - [Message Flashing](#message-flashing)
 
 
@@ -237,6 +238,41 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column -->
 
+<hr>
+
+## Redirection
+
+[Code Here ⚙️](/redirection)
+
+
+```python
+from flask import Flask, render_template, request
+from werkzeug.utils import redirect
+
+app = Flask(__name__)
+
+@app.route('/', methods = ['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        age = request.form.get('age')
+        return redirect(f'/result/{name}/{age}')
+    return render_template('home.html')
+    
+@app.route('/about')
+def about():
+    return "This is about"
+
+@app.route('/result/<name>/<age>')
+def result(name, age):
+    return render_template('result.html', name=name, age=age)
+
+app.run()
+
+```
+
+The canonical URL for the projects endpoint has a trailing slash. It’s similar to a folder in a file system. If you access the URL without a trailing slash (/about), Flask redirects you to the canonical URL with the trailing slash (/about/).
+ 
 <hr>
 
 ## Message Flashing
