@@ -21,6 +21,7 @@
 - [Minimal app](#minimal-app)
 - [Debug Mode](#debug-mode)
 - [Routing](#routing)
+- [Rendering Templates](#rendering-templates)
 - [URL Variables](#url-variables)
 - [Redirection](#redirection)
 - [Message Flashing](#message-flashing)
@@ -145,6 +146,29 @@ if __name__=="__main__":
 > Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to   directly visit a page.
 
 > Use the `route()` decorator to bind a function to a URL.
+
+<hr>
+
+## Rendering Templates
+
+```python
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template('index.html')
+
+@app.route("/")
+def about():
+    return render_template('about.html')
+
+if __name__=="__main__":
+    app.run()
+    
+```
+#### In flask, html file are served from the 'templates' folder by default and all the static file; images, css, js, etc are served from the 'static' folder. These folders should be present in the root directly of your python application
 
 <hr>
 
