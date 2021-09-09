@@ -168,8 +168,16 @@ if __name__=="__main__":
     app.run()
     
 ```
-#### In flask, html file are served from the 'templates' folder by default and all the static file; images, css, js, etc are served from the 'static' folder. These folders should be present in the root directly of your python application
+#### In flask, html file are served from the 'templates' folder by default and all the static file; images, css, js, etc are served from the 'static' folder. 
 
+> ### These folders should be present in the root directly of your python application
+
+<p align="center" >
+    
+<img src="https://i.ibb.co/7yp0z91/app-py.png"  alt="structure" style="width:350px" />
+
+</p>
+    
 <hr>
 
 ## URL Variables
