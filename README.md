@@ -172,7 +172,7 @@ if __name__=="__main__":
 ```
 #### In flask, html file are served from the 'templates' folder by default and all the static file; images, css, js, etc are served from the 'static' folder. 
 
-> ### These folders should be present in the root directly of your python application
+> These folders should be present in the root directly of your python application
 
 <p align="center" >
     
