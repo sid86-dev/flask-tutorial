@@ -1,3 +1,4 @@
+[![CodeQL](https://github.com/sid86-dev/flask-tutorial/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/sid86-dev/flask-tutorial/actions/workflows/codeql-analysis.yml)
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=sid86-dev.flask-tutorial)
 ![](https://img.shields.io/github/repo-size/sid86-dev/flask-tutorial)
 
