@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/sid86-dev/flask-tutorial/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/sid86-dev/flask-tutorial/actions/workflows/codeql-analysis.yml)
+[![OSSAR](https://github.com/sid86-dev/flask-tutorial/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/sid86-dev/flask-tutorial/actions/workflows/ossar-analysis.yml)
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=sid86-dev.flask-tutorial)
 ![](https://img.shields.io/github/repo-size/sid86-dev/flask-tutorial)
 
@@ -151,6 +153,8 @@ if __name__=="__main__":
 
 ## Rendering Templates
 
+[Code Here ⚙️](/render_template)
+
 ```python
 from flask import Flask, render_template
 
@@ -168,8 +172,16 @@ if __name__=="__main__":
     app.run()
     
 ```
-#### In flask, html file are served from the 'templates' folder by default and all the static file; images, css, js, etc are served from the 'static' folder. These folders should be present in the root directly of your python application
+#### In flask, html file are served from the 'templates' folder by default and all the static file; images, css, js, etc are served from the 'static' folder. 
 
+> These folders should be present in the root directly of your python application
+
+<p align="center" >
+    
+<img src="https://i.ibb.co/7yp0z91/app-py.png"  alt="structure" style="width:350px" />
+
+</p>
+    
 <hr>
 
 ## URL Variables
