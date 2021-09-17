@@ -6,7 +6,7 @@
 # A complete Flask tutorial for beginners
 
 > #### I made this tutorial to help and teach my students to make awesome dynamic websites using Flask. The Flask is an API of Python that allows us to build up web-applications.    It was developed by Armin Ronacher. Its Modern and very expressive, I learned it because it's just super useful and also allows me to write less code.
-> #### I tried to remove the extra topics of Flask and made this  beginner friendly as possible. So let's get started with the installation and then get an overview with the Quickstart. This Tutorial will show how to create a small but complete application with Flask.
+> #### I tried to remove the extra topics of Flask and made this  beginner friendly as possible. So let's get started with the installation and then get an overview with the Quickstart. This tutorial will show how to create a small but complete application with Flask.
 
 *Best of luck to you!*
 
